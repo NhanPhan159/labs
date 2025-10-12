@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type TCallback =
+		type TCallback =
   | ((value: string | number) => {
       isValid: boolean;
       errMessage: string | null;

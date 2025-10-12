@@ -1,4 +1,4 @@
 const config = {
-  VITE_API_KEY: import.meta.env.VITE_API_KEY || "",
+  VITE_SERVER_URL: import.meta.env.VITE_SERVER_URL || "",
 };
 export default config;
