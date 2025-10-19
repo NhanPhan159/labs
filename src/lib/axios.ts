@@ -5,6 +5,7 @@ import config from "@/config";
 
 const axiosClient = axios.create({
   baseURL: config.VITE_SERVER_URL,
+  withCredentials: true,
 });
 
 axiosClient.interceptors.request.use(

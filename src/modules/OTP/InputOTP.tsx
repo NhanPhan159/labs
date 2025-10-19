@@ -1,17 +1,20 @@
-import { Button } from "@/components/ui/button";
 import {
-  InputOTP,
+  InputOTP as InputOTPShadcn,
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import axiosClient from "@/lib/axios";
-import { useEffect, useState } from "react";
-
-export function InputOTPDemo() {
+import { useEffect, useState, type FC } from "react";
+type TInputOTP = {
+  stopCountDown: () => void
+}
+const InputOTP:FC<TInputOTP> = ({stopCountDown}) =>{
   const [value, setValue] = useState("");
   const validateCode = async (code: string) => {
     const data = await axiosClient.post("otp/check", { code });
     if (data.data) {
+      await axiosClient.post("otp/check", { code });
+      stopCountDown()
       alert("ok");
     } else {
       alert("nooooooooooo");
@@ -27,7 +30,7 @@ export function InputOTPDemo() {
 
   return (
     <div>
-      <InputOTP
+      <InputOTPShadcn
         value={value}
         onChange={(value) => setValue(value)}
         maxLength={6}
@@ -40,8 +43,8 @@ export function InputOTPDemo() {
           <InputOTPSlot index={4} />
           <InputOTPSlot index={5} />
         </InputOTPGroup>
-      </InputOTP>
-      <Button onClick={() => validateCode(value)}>Submit</Button>
+      </InputOTPShadcn>
     </div>
   );
 }
+export default InputOTP

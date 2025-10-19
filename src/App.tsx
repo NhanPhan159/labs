@@ -1,12 +1,10 @@
 import "./App.css";
-import Generate from "./modules/OTP/generate";
-import { InputOTPDemo } from "./modules/OTP/check";
+import OTP from "./modules/OTP/otp";
 
 function App() {
   return (
     <>
-      <Generate />
-      <InputOTPDemo />
+      <OTP/>
     </>
   );
 }
