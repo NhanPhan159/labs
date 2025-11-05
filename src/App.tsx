@@ -1,10 +1,10 @@
 import "./App.css";
-import OTP from "./modules/OTP/otp";
+import { DataTableDemo } from "./modules/ManagementTable/management-table";
 
 function App() {
   return (
     <>
-      <OTP/>
+      <DataTableDemo />
     </>
   );
 }
