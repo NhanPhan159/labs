@@ -1,10 +1,10 @@
 import "./App.css";
-import { DataTableDemo } from "./modules/ManagementTable/management-table";
+import RedisSearch from "./modules/RedisSearch/redis-search";
 
 function App() {
   return (
     <>
-      <DataTableDemo />
+      <RedisSearch />
     </>
   );
 }

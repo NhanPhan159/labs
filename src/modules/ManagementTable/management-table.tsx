@@ -35,9 +35,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import useTable from "@/hooks/querris/use-table";
-import useMutationTable from "@/hooks/querris/use-table";
-
+import { useMutationTable } from "@/hooks/querry/use-table";
 
 export type Payment = {
   id: string;
@@ -143,7 +141,7 @@ export function DataTableDemo() {
     [],
   );
   const muation = useMutationTable();
-  const [dataTable, setDataTable] = React.useState<Payment[]>([]);
+  const [dataTable, _setDataTable] = React.useState<Payment[]>([]);
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});

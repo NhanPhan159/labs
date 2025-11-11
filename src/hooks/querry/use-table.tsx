@@ -23,4 +23,4 @@ const useTable = () => {
   });
 };
 
-export default useMutationTable;
+export { useMutationTable, useTable };
