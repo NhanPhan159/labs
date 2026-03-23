@@ -29,6 +29,6 @@ const useHover = () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, [boundingClientRect]);
-  return { isHover, handleBoudingClientChange };
+  return { x, y, isHover, handleBoudingClientChange };
 };
 export default useHover;
